@@ -228,7 +228,7 @@ a {
 .hero h1 {
   position: relative;
   z-index: 4;
-  width: min(920px, 84vw);
+  width: calc(100vw - clamp(44px, 8vw, 128px));
   margin: clamp(34px, 6vh, 72px) 0 38px;
   font-family: var(--font-display);
   font-size: clamp(72px, 10.4vw, 178px);
@@ -240,6 +240,7 @@ a {
 
 .hero-line {
   display: block;
+  width: calc(100% + 0.14em);
   overflow: hidden;
 }
 
