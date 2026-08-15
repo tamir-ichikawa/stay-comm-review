@@ -243,6 +243,8 @@ a {
 .hero-line {
   display: block;
   width: calc(100% + 0.14em);
+  margin-block: -0.12em;
+  padding-block: 0.12em;
   overflow: hidden;
 }
 
@@ -260,7 +262,7 @@ a {
 }
 
 .hero-line.outline {
-  color: transparent;
+  color: var(--orange);
   -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--bone);
 }
 
@@ -772,7 +774,12 @@ a {
   text-transform: uppercase;
 }
 
-.statement h2 span {
+.statement-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.statement h2 .accent {
   color: var(--orange);
 }
 
@@ -1274,6 +1281,10 @@ a {
   white-space: nowrap;
 }
 
+.monumental-accent {
+  color: var(--orange);
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1338,7 +1349,9 @@ a {
   .hero { min-height: auto; }
   .hero-grid { display: flex; min-height: auto; flex-direction: column; }
   .hero-copy { min-height: 560px; padding: 70px 18px 52px; }
-  .hero h1 { width: 100%; margin: 44px 0 40px; font-size: clamp(58px, 18.5vw, 86px); line-height: .86; }
+  .hero h1 { width: 100%; margin: 44px 0 40px; font-size: clamp(40px, 12.3vw, 56px); line-height: .86; }
+  .hero-line,
+  .hero-line > span { white-space: nowrap; }
   .hero-bottom { align-items: center; }
   .hero-bottom p { max-width: 280px; font-size: 14px; }
   .round-link { width: 50px; height: 50px; }
@@ -1358,7 +1371,7 @@ a {
   .service-art { grid-column: 1 / -1; min-height: 270px; border-left: 0 !important; }
   .statement { min-height: 760px; padding: 80px 32px; }
   .statement::after { inset: 12px; }
-  .statement h2 { font-size: clamp(64px, 19vw, 92px); line-height: .76; }
+  .statement h2 { width: 100%; font-size: clamp(38px, 11.8vw, 52px); line-height: .82; }
   .statement-copy { align-self: flex-start; margin: 40px 0 0; font-size: 14px; }
   .statement-shade { background: linear-gradient(0deg, rgba(10,10,10,.94), rgba(10,10,10,.25)); }
   .about-top {
@@ -1369,7 +1382,7 @@ a {
     margin-bottom: 0;
     padding: clamp(36px, 10vw, 46px) clamp(20px, 6.2vw, 26px);
   }
-  .about-top::before { background-position: 62% center; background-size: auto 100%; background-repeat: no-repeat; opacity: .23; }
+  .about-top::before { background-position: 66% center; background-size: 205% auto; background-repeat: no-repeat; opacity: .23; }
   .about-top::after { background: linear-gradient(180deg, rgba(10,10,10,.8), rgba(10,10,10,.58) 54%, rgba(10,10,10,.8)); }
   .about-lead {
     width: 100%;
@@ -1401,6 +1414,7 @@ a {
   .footer-top { grid-template-columns: 1fr auto; }
   .footer-top > div { display: none; }
   .monumental { margin-top: 80px; font-size: 29vw; white-space: normal; }
+  .monumental > span { display: block; }
   .footer-bottom { align-items: flex-start; flex-direction: column; }
 }
 
