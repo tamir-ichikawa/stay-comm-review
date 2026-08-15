@@ -1361,10 +1361,25 @@ a {
   .statement h2 { font-size: clamp(64px, 19vw, 92px); line-height: .76; }
   .statement-copy { align-self: flex-start; margin: 40px 0 0; font-size: 14px; }
   .statement-shade { background: linear-gradient(0deg, rgba(10,10,10,.94), rgba(10,10,10,.25)); }
-  .about-top { display: block; min-height: 500px; margin-bottom: 0; padding: 44px 24px; }
-  .about-top::before { background-position: center bottom; background-size: 100% auto; background-repeat: no-repeat; opacity: .22; }
-  .about-top::after { background: linear-gradient(180deg, rgba(10,10,10,.72), rgba(10,10,10,.42) 52%, rgba(10,10,10,.82)); }
-  .about-lead { margin-top: 34px; font-size: 33px; }
+  .about-top {
+    display: flex;
+    min-height: clamp(520px, 136vw, 600px);
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding: clamp(36px, 10vw, 46px) clamp(20px, 6.2vw, 26px);
+  }
+  .about-top::before { background-position: 62% center; background-size: auto 100%; background-repeat: no-repeat; opacity: .23; }
+  .about-top::after { background: linear-gradient(180deg, rgba(10,10,10,.8), rgba(10,10,10,.58) 54%, rgba(10,10,10,.8)); }
+  .about-lead {
+    width: 100%;
+    max-width: none;
+    margin-top: clamp(28px, 8vw, 36px);
+    font-size: clamp(28px, 8vw, 33px);
+    line-height: 1.03;
+    letter-spacing: -.035em;
+    overflow-wrap: break-word;
+  }
   .about-grid { display: block; }
   .about-grid > * { min-height: 330px; border-left: 0 !important; border-bottom: 1px solid rgba(233,229,218,.28); }
   .about-copy { min-height: 300px; }
