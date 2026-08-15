@@ -263,7 +263,6 @@ a {
 
 .hero-line.outline {
   color: var(--orange);
-  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--bone);
 }
 
 @keyframes line-in {
